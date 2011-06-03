@@ -1,0 +1,38 @@
+UserAgentSleuth
+===================
+
+Painless identification of browsers and operating systems.
+
+Example
+=======
+
+Testing for browsers
+user_agent.ie?                       # true if IE
+user_agent.ie?(7)                    # IE 7.x
+user_agent.ie?(7.0)                  # IE 7.0
+user_agent.ie.Lte?(7.0)                  # IE 7.0
+user_agent.ie.compatibility_view?    # IE in compatibility view
+user_agent.firefox?(3.5)             # Firefox 3.5
+user_agent.chrome?(10)               # Chrome 10
+user_agent.chrome?(4.1)              # Chrome 4.1
+
+Testing for operating systems
+user_agent.os.windows?               # Windows
+user_agent.os.windows?("NT")         # Windows NT based (NT, 2000, XP, Vista, 7)
+
+user_agent.os.windows?("XP")         # Windows XP
+user_agent.os.windows(5.1)?          # Windows XP
+user_agent.os.windows?("Vista")      # Windows Vista
+user_agent.os.windows?("7")          # Windows 7 (Watch out, Windows 7 is actually NT 6.1)
+user_agent.os.macos?                 # Mac OS (any version, including pre-OS X)
+user_agent.os.macos?("X")            # Mac OS X
+user_agent.os.macos?(10.6)           # Mac OS X 10.6
+user_agent.os.macos?("10.6.7")       # Mac OS X 10.6.7
+
+Coming Soon
+===========
+
+Mobile device detection, such as iPhone, iPad, etc.
+
+Copyright (c) 2011 Raymond Lucke, released under the MIT license
+
