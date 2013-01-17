@@ -18,14 +18,14 @@ module UserAgentSleuth
       agent_key = sym.to_s.gsub(/[^[:alnum:]]/,'').to_sym
 
       unless AGENTS.keys.include? agent_key
-        return super(sym, *args, &block) 
+        return super(sym, *args, &block)
       end
 
       agent_match?(AGENTS[agent_key], args.first)
     end
 
     def to_s
-      @user_agent
+      @user_agent.to_s
     end
 
     private
